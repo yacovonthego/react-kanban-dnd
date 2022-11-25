@@ -1,30 +1,39 @@
 import styled from 'styled-components';
 
-const StyledSearchBar = styled.div`
+export type TSearchBarTheme = {
+  brad?: string
+  bg?: string
+  iconRight?: string
+  pad?: string
+  color?: string
+}
+
+interface IStyledButtonProps {
+  theme: TSearchBarTheme
+}
+
+const StyledSearchBar = styled.div<IStyledButtonProps>`
   position: relative;
-  background: #2D4071;
-  margin: 0 16px;
-  border-radius: 4px; 
-  max-height: 32px;
+  background: ${({ theme: { bg = '#F5F8FA' } }) => bg};
+  border-radius: ${({ theme: { brad = '50px' } }) => brad}; 
 
   svg {
     position: absolute;
     top: 50%;
-    right: 8px;
+    right: ${({ theme: { iconRight = '12px' } }) => iconRight};
     transform: translateY(-50%);
   }
 
   label {
     display: block;
     cursor: text;
-    padding: 9px 10px;
-    max-height: 32px;
+    padding: ${({ theme: { pad = '12px 16px' } }) => pad};
   }
 
   input {
     background: transparent;
     line-height: 14px;
-    color: #fff;
+    color: ${({ theme: { color = '#222' } }) => color};
     border: none;
     width: 143px;
     max-height: 14px;

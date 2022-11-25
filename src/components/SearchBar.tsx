@@ -1,13 +1,22 @@
 import * as React from 'react';
 import SearchIcon from '../assets/svg/SearchIcon';
-import StyledSearchBar from './styled/SearchBar.styled';
+import StyledSearchBar, { TSearchBarTheme } from './styled/SearchBar.styled';
 
 interface ISearchBarProps {
+  theme?: TSearchBarTheme
 }
 
-const SearchBar: React.FunctionComponent<ISearchBarProps> = ({ }) => {
+export const SideBarSearchBarTheme: TSearchBarTheme = {
+  bg: '#2D4071',
+  brad: '4px',
+  iconRight: '4px',
+  pad: '9px 10px',
+  color: '#fff'
+}
+
+const SearchBar: React.FunctionComponent<ISearchBarProps> = ({ theme }) => {
   return (
-    <StyledSearchBar>
+    <StyledSearchBar theme={theme}>
       <label>
         <input placeholder="Search..." type="text" />
         <SearchIcon />

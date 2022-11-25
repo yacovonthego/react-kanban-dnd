@@ -19,7 +19,7 @@ const ProjectsAccordion: React.FunctionComponent<IAccordionProps> = ({ summaryTe
       </StyledAccordionSummary>
       <StyledAccordionDetails>
         <ul>
-          <List<string> items={projects} renderItem={(projectName) => <li>{projectName}</li>} />
+          <List<string> items={projects} renderItem={(projectName) => <li key={projectName}>{projectName}</li>} />
         </ul>
       </StyledAccordionDetails>
     </StyledAccordion>

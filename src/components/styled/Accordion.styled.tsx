@@ -37,6 +37,10 @@ export const StyledAccordionDetails = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   li + li {
