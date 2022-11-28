@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import StyledFlex from './Flex.styled';
+import styled from 'styled-components'
 
 const StyledLayout = styled.div`
   display: flex;
@@ -9,10 +8,6 @@ const StyledLayout = styled.div`
   max-width: 100vw;
   max-height: 100vw;
   overflow: hidden;
-
-  & > ${StyledFlex} {
-    flex-direction: column;
-  }
 `
 
 export default StyledLayout;

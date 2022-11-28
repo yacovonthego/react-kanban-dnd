@@ -18,7 +18,7 @@ export const AddButtonTheme: TButtonTheme = {
 export const DropDownButtonTheme: TButtonTheme = {
   iconPosition: ButtonIconPosition.right
 }
-
+//TODO: StyledButton = styled(Button)
 const Button: React.FunctionComponent<IButtonProps> = ({ 
   text,
   beforeIcon,
